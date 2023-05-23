@@ -34,7 +34,7 @@ class TestSmoke():
     appurl = config.get('stage', 'client_URL')
     test = DataGenerator()
     testName = utils.whoami() + test.getCurrTime()
-    testdata_job = test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
+    testdata= test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
 
     @pytest.mark.nh
     def test_login_hm(self):
@@ -57,13 +57,13 @@ class TestSmoke():
         print("title of Create Newhire" + self.driver.title)
         assert "HM Create NewHire | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         time.sleep(10)
-        createnhpage.completecreatenewhire(self.testdata_job[2], "English(US)", self.testdata_job[0],
-                                           self.testdata_job[1], self.testdata_job[3], "8648378",
+        createnhpage.completecreatenewhire(self.testdata[2], "English(US)", self.testdata[0],
+                                           self.testdata[1], self.testdata[3], "8648378",
                                            "12345", "United States", "Maryland")
 
         assert homepage.isElementPresent(homepage.mytasks, "css") == True
         ts.mark("Pass", "User is being navigated to Home Page")
-        homepage.click_newhire(self.testdata_job[1], self.testdata_job[0])
+        homepage.click_newhire(self.testdata[1], self.testdata[0])
         ts.mark("Pass", "User is navigated to Onboard Tasks")
 
     def test_CompleteObStartTask(self):
@@ -87,7 +87,7 @@ class TestSmoke():
     def test_resetPassword(self):
         admin = AdminPage(self.driver)
         home = HomePage(self.driver)
-        reseturl = admin.searchUser(self.testdata_job[2])
+        reseturl = admin.searchUser(self.testdata[2])
         time.sleep(10)
         home.logoutfromts()
         time.sleep(10)
@@ -102,7 +102,7 @@ class TestSmoke():
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
-        lp.logintsonboard(self.appurl, self.testdata_job[2], "QAtest234#")
+        lp.logintsonboard(self.appurl, self.testdata[2], "QAtest234#")
         time.sleep(10)
         print(self.driver.title)
 

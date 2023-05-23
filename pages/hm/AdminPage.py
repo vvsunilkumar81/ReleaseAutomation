@@ -32,7 +32,8 @@ class AdminPage(BasePage):
     secretans2 = "ChlgAnswer2"
     secretqn3 = "ChlgQId3"
     secretans3 = "ChlgAnswer3"
-
+    firstContinue="continueButton"
+    lastContinue="continueBtn"
 
     continueBtn="// button[contains(name(), 'continueBtn')]"
 
@@ -71,7 +72,7 @@ class AdminPage(BasePage):
         confirmpwd=self.driver.find_element(By.NAME,"confirmPassword")
         confirmpwd.click()
         confirmpwd.send_keys(password)
-        continueButton=self.driver.find_element(By.NAME, "continueButton")
+        continueButton=self.driver.find_element(By.NAME, self.firstContinue)
         continueButton.click()
         time.sleep(5)
         secretqn1= self.driver.find_element(By.ID,self.secretqn1)
@@ -98,7 +99,10 @@ class AdminPage(BasePage):
         self.driver.find_element(By.ID, self.secretans3).click()
         self.driver.find_element(By.ID, self.secretans3).clear()
         self.driver.find_element(By.ID, self.secretans3).send_keys(ans3)
-        self.elementClick(By.XPATH,self.continueButton)
+        time.sleep(1)
+        lastcontinueButton = self.driver.find_element(By.NAME, self.lastContinue)
+        lastcontinueButton.click()
+        time.sleep(5)
         time.sleep(5)
 
 
