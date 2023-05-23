@@ -1,0 +1,35 @@
+RequisitionNumber: 303944
+WorkflowName: BWS_I9_SIMPLE
+Username: autFriAprfqbo
+Firstname: AutFirstFriAprfqbo
+LastName: AuLastFriAprfqbo
+Email: autFriAprfqbo@mailinator.com
+autFriAprfqbo
+sucessfully fetched the data with parameters provided
+26388c9b-743e-4896-8dd2-83055ea110a3
+Bearer 26388c9b-743e-4896-8dd2-83055ea110a3
+sso_id in query: b576ad997d83435a8d864bb7fb89610c
+b576ad997d83435a8d864bb7fb89610c
+Bearer 26388c9b-743e-4896-8dd2-83055ea110a3
+b576ad997d83435a8d864bb7fb89610c
+{"result":{"success":true,"id":"b576ad997d83435a8d864bb7fb89610c"}}
+Bearer 26388c9b-743e-4896-8dd2-83055ea110a3
+autFriAprfqbo
+https://9.37.226.233:11339/api/USSE_GEJuly/password/token
+c08e6032-c118-4d96-a461-df5e4b30d197
+Bearer 26388c9b-743e-4896-8dd2-83055ea110a3
+autFriAprfqbo
+https://9.37.226.233:11339/api/USSE_GEJuly/password/token
+252944b1-dc01-4439-a893-077efc581fb7
+Bearer c08e6032-c118-4d96-a461-df5e4b30d197
+autFriAprfqbo
+https://9.37.226.233:11339/api/USSE_GEJuly/password/reset
+{"result":{"success":true}}
+4
+cQuestions.ffe1184daa3540ca9e72562ce86cf29c=answer0&cQuestions.a06c1671e4af475f9982959e82c391b1=answer1&cQuestions.f2cb88329f594887a89ede8b7421540f=answer2&cQuestions.2eba6d18021d4c18a94d55dfea2561e9=answer3&cQuestions.d7794e7d18d04191b607d61ad5618f72=answer4
+dummy&cQuestions.ffe1184daa3540ca9e72562ce86cf29c=answer0&cQuestions.a06c1671e4af475f9982959e82c391b1=answer1&cQuestions.f2cb88329f594887a89ede8b7421540f=answer2&cQuestions.2eba6d18021d4c18a94d55dfea2561e9=answer3&cQuestions.d7794e7d18d04191b607d61ad5618f72=answer4
+{"result":{"success":true}}
+sucessfully fetched the data with parameters provided
+41f32177-a34a-4caf-bde9-2108649c1fcd
+done
+Login | Infinite BrassRing Platform

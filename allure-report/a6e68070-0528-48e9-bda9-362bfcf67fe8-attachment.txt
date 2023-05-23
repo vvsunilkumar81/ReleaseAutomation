@@ -1,0 +1,7 @@
+Assertion error occurred
+assert 'Logout | Inf...Ring Platform' == 'Logouts | In...Ring Platform'
+  - Logouts | Infinite BrassRing Platform
+  ?       -
+  + Logout | Infinite BrassRing Platform
+Executed 
+Test completed

@@ -1,0 +1,19 @@
+[32mINFO    [0m LoginPage:test_login.py:60 B-O is running
+[32mINFO    [0m LoginPage:LoginPage.py:62 Navigating to TS Onboard URL
+[32mINFO    [0m LoginPage:LoginPage.py:64 Page title is-Login | Infinite BrassRing Platform
+[32mINFO    [0m LoginPage:LoginPage.py:67 Navigating to TS Homepage
+[32mINFO    [0m LoginPage:LoginPage.py:68 Page title is-Onboard home | Onboard Manager | Infinite BrassRing Platform
+[32mINFO    [0m TestStatus:teststatus.py:28 ### VERIFICATION SUCCESSFUL :: + Logged in Home page successfully
+[32mINFO    [0m TestStatus:teststatus.py:62 Login ### TEST SUCCESSFUL
+[32mINFO    [0m HomePage:HomePage.py:37 Click on Newhire filter 
+[32mINFO    [0m HomePage:HomePage.py:40 Enter Newhire nameAutLastabihMondayNovember28112022194750, AutFirstabihMondayNovember28112022194750
+[32mINFO    [0m TestStatus:teststatus.py:28 ### VERIFICATION SUCCESSFUL :: + Fetched the required newhire
+[32mINFO    [0m TestStatus:teststatus.py:62 Verification of Newhire name ### TEST SUCCESSFUL
+[32mINFO    [0m HomePage:test_login.py:77 Click on Newhire to Navaigate to Onboarding Tasks page
+[32mINFO    [0m NewhireTasksPage:NewhireTasksPage.py:20 Get the newhire task name
+[32mINFO    [0m NewhireTasksPage:selenium_driver.py:156 Getting text on element :: 
+[32mINFO    [0m NewhireTasksPage:selenium_driver.py:157 The text is :: 'Automation_NoTemplate'
+[32mINFO    [0m HomePage:test_login.py:81 Clcik on No template task to complete No Template task
+[32mINFO    [0m HomePage:test_login.py:84 click on logout 
+[32mINFO    [0m HomePage:HomePage.py:56 Click on Logout link 
+[32mINFO    [0m HomePage:HomePage.py:59 Getting Driver title

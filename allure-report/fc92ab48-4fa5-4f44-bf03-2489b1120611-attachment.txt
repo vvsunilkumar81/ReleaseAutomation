@@ -1,0 +1,2 @@
+[32mINFO    [0m test_logout:test_login.py:39 Click username
+[32mINFO    [0m test_logout:test_login.py:41 Click logout
