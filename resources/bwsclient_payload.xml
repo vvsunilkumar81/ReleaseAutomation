@@ -1,0 +1,89 @@
+<?xml version="1.0" ?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lis="http://listener.integration.core.kenexa.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <lis1:callService xmlns:lis1="http://listener.integration.kr.kenexa.com/">
+            <iePackage>
+                <username>kenexa</username>
+                <!--put your values in here only changes per client-->
+                <password>kenexa</password>
+                <!--put your values in here only changes per client-->
+                <messageId>10/24/2013 09:50:41</messageId>
+                <action>2xB_ONBOARDING_IMPORT</action>
+                <client>USSE_GEJuly</client>
+                <!--put your values in here changes per client-->
+                <key/>
+            </iePackage>
+            <requestMessage>
+                <Onboard>
+                    <JobRequisition>
+                        <workFlow>BWS_I9_SIMPLE</workFlow>
+                         <rehireIndicator/>
+                        <jobcode>Software Engineer</jobcode>
+                        <Id idOwner="customCondition">
+                            <IdValue>Maybe</IdValue>
+                        </Id>
+                        <reqid>60619</reqid>
+                        <reqstatus/>
+                        <title>Software Engineer</title>
+                        <reqNo>60619</reqNo>
+                        <jobdescription>Leader of the Sales</jobdescription>
+                        <PrimaryHiringManager>SunilHM</PrimaryHiringManager>
+                        <PrimaryRecruiter>weastonRecruiter</PrimaryRecruiter>
+                        <requisitionteam>
+                            <user>SunilHM</user>
+                            <user>weaston</user>
+                            <user>NewEnvHM</user>
+                            <user>NewEnvRec</user>
+                        </requisitionteam>
+
+                        <country>United States</country>
+                        <location>${#TestCase#jobLocation}</location>
+                        <numberofpositions>1</numberofpositions>
+                        <language>en</language>
+                        <stateOrProvince>Alabama</stateOrProvince>
+                        <city>Wayne</city>
+                        <postalCode/>
+                        <Franchise>${#TestCase#franchiseValue}</Franchise>
+                        <TaxCreditLocationId>111</TaxCreditLocationId>
+                    </JobRequisition>
+                    <NewHire>
+                        <UserArea>
+                            <Id idOwner="externalCareerCenter">
+                                <IdValue>Default External Career Center</IdValue>
+                            </Id>
+                        </UserArea>
+                        <NewHireProfile>
+                            <Cruid>60619</Cruid>
+                            <PersonalData>
+                                <AnniversaryDate/>
+                                <userName>autMonJunsgul</userName>
+                                <State>California</State>
+                                <Country>United States</Country>
+                                <PostalCode>47856</PostalCode>
+                                <Municipality>Buffalo</Municipality>
+                                <AddressLine>7 Main Street</AddressLine>
+                                <FirstName>AutFirstMonJunsgul</FirstName>
+                                <MiddleName/>
+                                <LastName>AuLastMonJunsgul</LastName>
+                                <ssn/>
+                                <emailAddress>autMonJunsgul@mailinator.com</emailAddress>
+                                <dateOfBirth/>
+                                <Phone>
+                                    <Home>123-456-1024</Home>
+                                </Phone>
+
+                            </PersonalData>
+                            <HireDetails>
+                                <CandidateStartDate/>
+                                <OnboardStartDate/>
+
+                            </HireDetails>
+                            <everifiedExternally>false</everifiedExternally>
+                        </NewHireProfile>
+                    </NewHire>
+                    <Users/>
+                </Onboard>
+            </requestMessage>
+        </lis1:callService>
+    </soapenv:Body>
+</soapenv:Envelope>

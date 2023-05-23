@@ -1,0 +1,15 @@
+115906
+autabihMondayNovember28112022194750@mailinator.com
+autabihMondayNovember28112022194750
+<class 'str'>
+UserName: authzrxMondayNovember28112022175737
+Firstname: AutFirsthzrxMondayNovember28112022175737
+LastName: AutLasthzrxMondayNovember28112022175737
+Newhire Email: authzrxMondayNovember28112022175737@mailinator.com
+sucessfully fetched the data with parameters provided
+{"paging":{"max":50,"offset":0,"total":1},"results":[{"hris_employee_id":"","user_name":"authzrxMondayNovember28112022175737","sso_id":"05d50447c50144ffb2b27d3c927e1264","client":"bws_smoke3","first_name":"AutFirsthzrxMondayNovember28112022175737","middle_name":null,"last_name":"AutLasthzrxMondayNovember28112022175737","job_title":null,"phone_number":null,"phone_extension":null,"fax_number":null,"email_address":"authzrxMondayNovember28112022175737@mailinator.com","licenses":["NHP"],"authorities":["ROLE_USER"],"account_expired":false,"account_locked":false,"password_expired":false,"enabled":true,"sso_enabled":false,"is_blueId_user":false,"is_brassring_first_time_login":false,"last_failed_attempt":null,"last_successful_login":null,"num_failed_challenge_question_attempts":0,"num_failed_login_attempts":0,"validity_date":"2022-11-28T14:18:20Z","expiration_date":null,"country":null,"timeZone":null,"locale":"en_US","iso_locale":"en_US","date_created":"2022-11-28T14:18:20Z","last_updated":"2022-11-28T14:18:21Z","user_category":"NEW_HIRE"}]}
+sso_id in query: 05d50447c50144ffb2b27d3c927e1264
+3
+cQuestions.bc141d5ecd8940cdaee5713e1f74a874=answer0&cQuestions.06504298dcb04c869afdad0e01dc86d5=answer1&cQuestions.d7e4367acb3949499b66bb17cfb95c06=answer2&cQuestions.12fb7edc7c22457a8afd728a44c7f56c=answer3cQuestions.746065c6f1434c22bb0bd2468b7be961=answer4&
+sucessfully fetched the data with parameters provided
+AutLasthzrxMondayNovember28112022175737 AutFirsthzrxMondayNovember28112022175737

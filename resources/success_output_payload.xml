@@ -1,0 +1,87 @@
+<?xml version="1.0" ?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:lis="http://listener.integration.core.kenexa.com/">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <lis1:callService xmlns:lis1="http://listener.integration.kr.kenexa.com/">
+            <iePackage>
+                <username>kenexa</username>
+                <!--put your values in here only changes per client-->
+                <password>kenexa</password>
+                <!--put your values in here only changes per client-->
+                <messageId>02/06/2023 09:50:41</messageId>
+                <action>2xB_ONBOARDING_IMPORT</action>
+                <client>Success</client>
+                <!--put your values in here changes per client-->
+                <key/>
+            </iePackage>
+            <requestMessage>
+                <Onboard>
+                    <JobRequisition>
+                        <workFlow>Automation_I9_W4</workFlow>
+                         <rehireIndicator/>
+                        <jobcode>QA Lead</jobcode>
+                        <Id idOwner="customCondition">
+                            <IdValue>Maybe</IdValue>
+                        </Id>
+                        <reqid>195947</reqid>
+                        <reqstatus/>
+                        <title>QA Lead</title>
+                        <reqNo>195947</reqNo>
+                        <jobdescription>Leader of the Sales</jobdescription>
+                        <PrimaryHiringManager>hmautomation</PrimaryHiringManager>
+                        <PrimaryRecruiter>kenrecruiter</PrimaryRecruiter>
+                        <requisitionteam>
+                            <user>MyAdmin1</user>
+
+                        </requisitionteam>
+
+                        <country>United States</country>
+                        <location>${#TestCase#jobLocation}</location>
+                        <numberofpositions>1</numberofpositions>
+                        <language>en</language>
+                        <stateOrProvince>Alabama</stateOrProvince>
+                        <city>Wayne</city>
+                        <postalCode/>
+                        <Franchise>${#TestCase#franchiseValue}</Franchise>
+                        <TaxCreditLocationId>111</TaxCreditLocationId>
+                    </JobRequisition>
+                    <NewHire>
+                        <UserArea>
+                            <Id idOwner="externalCareerCenter">
+                                <IdValue>Default External Career Center</IdValue>
+                            </Id>
+                        </UserArea>
+                        <NewHireProfile>
+                            <Cruid>195947</Cruid>
+                            <PersonalData>
+                                <AnniversaryDate/>
+                                <userName>autTuesdayFebruary07022023123529mjzy</userName>
+                                <State>California</State>
+                                <Country>United States</Country>
+                                <PostalCode>47856</PostalCode>
+                                <Municipality>Buffalo</Municipality>
+                                <AddressLine>7 Main Street</AddressLine>
+                                <FirstName>AutFirstTuesdayFebruary07022023123529mjzy</FirstName>
+                                <MiddleName/>
+                                <LastName>AutLastTuesdayFebruary07022023123529mjzy</LastName>
+                                <ssn/>
+                                <emailAddress>autTuesdayFebruary07022023123529mjzy@dispostable.com</emailAddress>
+                                <dateOfBirth/>
+                                <Phone>
+                                    <Home>123-456-1024</Home>
+                                </Phone>
+
+                            </PersonalData>
+                            <HireDetails>
+                                <CandidateStartDate/>
+                                <OnboardStartDate/>
+
+                            </HireDetails>
+                            <everifiedExternally>false</everifiedExternally>
+                        </NewHireProfile>
+                    </NewHire>
+                    <Users/>
+                </Onboard>
+            </requestMessage>
+        </lis1:callService>
+    </soapenv:Body>
+</soapenv:Envelope>

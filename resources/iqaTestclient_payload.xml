@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:lis="http://listener.integration.core.kenexa.com/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <lis1:callService xmlns:lis1="http://listener.integration.kr.kenexa.com/">
+      <iePackage>
+        <username>kenexa</username>
+        <password>kenexa</password>
+        <messageId>10/24/2013 09:50:41</messageId>
+        <action>2xB_ONBOARDING_IMPORT</action>
+        <client>iqaTestclient</client>
+        <key/>
+      </iePackage>
+      <requestMessage>
+        <Onboard>
+          <JobRequisition>
+            <workFlow>Automation_I9_Section2</workFlow>
+            <rehireIndicator>false</rehireIndicator>
+            <jobcode>Administrative Assistant</jobcode>
+            <ThirdPartyApproverName/>
+            <Id idOwner="customCondition">
+              <IdValue>Maybe</IdValue>
+            </Id>
+            <franchisename>ScriptFix</franchisename>
+            <reqid></reqid>
+            <reqstatus/>
+            <title>Administrative Assistant</title>
+            <jobdescription>Assistant to an executive. Person would be responsible for managing calendar and coordinating with other executives.</jobdescription>
+            <manager>hmregress</manager>
+            <recruiter>recregress</recruiter>
+            <requisitionteam>
+              <user>hmregress</user>
+              <user>recregress</user>
+            </requisitionteam>
+            <country>United States</country>
+            <location>Location1</location>
+            <numberofpositions>1</numberofpositions>
+            <language>en</language>
+            <stateOrProvince>CA</stateOrProvince>
+            <city/>
+            <postalCode/>
+          </JobRequisition>
+          <Candidate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://ns.hr-xml.org/2007-04-15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            <UserArea>
+              <Id idOwner="externalCareerCenter">
+                <IdValue>Default External Career Center</IdValue>
+              </Id>
+            </UserArea>
+            <CandidateProfile>
+              <PersonalData>
+                <onboardStartDate>12-11-2022</onboardStartDate>
+                <candidateStartDate>12-10-2022</candidateStartDate>
+                <HireDetails>
+                  <CandidateStartDate>12-10-2022</CandidateStartDate>
+                </HireDetails>
+                <PersonName>
+                  <GivenName>AutFirstDecTueLgcb</GivenName>
+                  <MiddleName>Adams</MiddleName>
+                  <LegalName>AutLastDecTueShuf</LegalName>
+                </PersonName>
+                <ContactMethod>
+                  <Location>home</Location>
+                  <Telephone>
+                    <FormattedNumber>123-456-1024</FormattedNumber>
+                  </Telephone>
+                  <Fax>
+                    <FormattedNumber/>
+                  </Fax>
+                  <InternetEmailAddress></InternetEmailAddress>
+                  <InternetWebAddress/>
+                  <PostalAddress>
+                    <CountryCode>United States</CountryCode>
+                    <PostalCode>19406-1111</PostalCode>
+                    <Region>CA</Region>
+                    <Municipality>Buffalo</Municipality>
+                    <DeliveryAddress>
+                      <AddressLine>7 Main Street</AddressLine>
+                      <StreetName/>
+                    </DeliveryAddress>
+                  </PostalAddress>
+                </ContactMethod>
+                <ContactMethod>
+                  <Location>inPerson</Location>
+                  <Telephone>
+                    <FormattedNumber/>
+                  </Telephone>
+                </ContactMethod>
+                <ContactMethod>
+                  <Location>office</Location>
+                  <Telephone>
+                    <FormattedNumber/>
+                  </Telephone>
+                </ContactMethod>
+                <PersonDescriptors>
+                  <DemographicDescriptors>
+                    <Race/>
+                  </DemographicDescriptors>
+                  <BiologicalDescriptors>
+                    <DateOfBirth>Oct 24 2002 12:00AM</DateOfBirth>
+                    <GenderCode/>
+                  </BiologicalDescriptors>
+                </PersonDescriptors>
+              </PersonalData>
+              <UserArea>
+                <Id idOwner="Locale">
+                  <IdValue>en_US</IdValue>
+                </Id>
+                <Id idOwner="SSOID">
+                  <IdValue/>
+                </Id>
+                <Id idOwner="Candidate_ref_number">
+                  <IdValue></IdValue>
+                </Id>
+                <Id idOwner="SSOUserName">
+                  <IdValue></IdValue>
+                </Id>
+                <Id idOwner="National_ID">
+                  <IdValue>122-22-2222</IdValue>
+                </Id>
+                <Id idOwner="Start_Date">
+                  <IdValue>05/24/2018</IdValue>
+                </Id>
+                <Id idOwner="Applicant_customString1">
+                  <IdValue>Yes</IdValue>
+                </Id>
+                <Id idOwner="TaxCreditLocationId">
+                  <IdValue>111</IdValue>
+                </Id>
+              </UserArea>
+            </CandidateProfile>
+            <UserArea/>
+          </Candidate>
+          <Users/>
+        </Onboard>
+      </requestMessage>
+    </lis1:callService>
+  </soapenv:Body>
+</soapenv:Envelope>
