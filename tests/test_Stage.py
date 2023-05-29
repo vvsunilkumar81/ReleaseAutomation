@@ -6,6 +6,7 @@ from pages.hm.AdminPage import AdminPage
 from pages.hm.CreateNewHirePage import CreateNewHirePage
 from pages.hm.MyTasksPage import MyTasksPage
 from pages.hm.OnboardStartPage import OnboardStartPage
+from pages.nh.ConflictInterestPage import ConflictInterestPage
 from pages.nh.DigitalSignature import DigitalSignature
 from pages.nh.DirectCreditPage import DirectCreditPage
 from pages.nh.GenericPage import GenericPage
@@ -34,7 +35,7 @@ class TestSmoke():
     appurl = config.get('stage', 'client_URL')
     test = DataGenerator()
     testName = utils.whoami() + test.getCurrTime()
-    testdata= test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
+    testdata = test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
 
     @pytest.mark.nh
     def test_login_hm(self):
@@ -116,7 +117,7 @@ class TestSmoke():
         noform.completeTask("Yes", "Male", "test")
         time.sleep(5)
 
-    def test_DirectCredit(self):
+    def test_CompleteDirectCredit(self):
         nhtasks = NHMyTasksPage(self.driver)
         dc = DirectCreditPage(self.driver)
         print(self.driver.title)
@@ -125,6 +126,19 @@ class TestSmoke():
         print(self.driver.title)
         dc.completeTask("ICICI", "1234567", "yes", "yes")
         time.sleep(5)
+
+    def test_CompleteConflictInterest(self):
+        nhtasks = NHMyTasksPage(self.driver)
+        ds = DigitalSignature(self.driver)
+        ci = ConflictInterestPage(self.driver)
+        print(self.driver.title)
+        nhtasks.clickTask("Conflict of Interest")
+        time.sleep(5)
+        print(self.driver.title)
+        ci.completeTask("Yes")
+        time.sleep(5)
+        print(self.driver.title)
+
 
     def test_Logout_NH(self):
         home = HomePage(self.driver)

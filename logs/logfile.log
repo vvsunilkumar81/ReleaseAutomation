@@ -1,0 +1,36 @@
+05/29/2023 12:31:44 PM - TSLoginPage - INFO: Navigating to TS Homepage
+05/29/2023 12:31:44 PM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+05/29/2023 12:31:54 PM - TestStatus - INFO: + User is being navigated to Landing Page
+05/29/2023 12:31:54 PM - HomePage - INFO: Click on createnewhire button to navigate to Create Newhire page 
+05/29/2023 12:32:50 PM - TestStatus - INFO: + User is being navigated to Home Page
+05/29/2023 12:32:50 PM - HomePage - INFO: Click on Newhire filter 
+05/29/2023 12:32:57 PM - HomePage - INFO: Enter Newhire nameAutLastMondayMayyfxt, AutFirstMondayMayyfxt
+05/29/2023 12:33:17 PM - TestStatus - INFO: + Fetched the required newhire
+05/29/2023 12:33:17 PM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+05/29/2023 12:33:17 PM - TestStatus - INFO: + User is navigated to Onboard Tasks
+05/29/2023 12:33:17 PM - TestStatus - INFO: + User is navigated to Onboard Task page
+05/29/2023 12:33:17 PM - MyTasksPage - INFO: User now click Onboard Start linkOnboard Start
+05/29/2023 12:33:45 PM - MyTasksPage - INFO: click app launcher
+05/29/2023 12:34:00 PM - TestStatus - INFO: + User is navigated to Admin App
+05/29/2023 12:34:00 PM - AdminPage - INFO: click side naviation bar
+05/29/2023 12:34:24 PM - AdminPage - INFO: click on Filter
+05/29/2023 12:34:51 PM - AdminPage - INFO: Getting text on element :: 
+05/29/2023 12:34:51 PM - AdminPage - INFO: The text is :: 'Your profile on the stgTestclient website has been successfully created.
+To begin, click on the link below. You will be prompted to create a password during the login process.
+https://stagingts.brassring.com/ibp/core/app/redirect/stgTestclient/?uri=kx%3alogin%253aautMondayMayyfxt%253arst%253aff2a1fea-3adb-4594-a659-3499b75308a6
+After creating your password, you will be able to access your application with the below username:
+User Name autMondayMayyfxt'
+05/29/2023 12:35:09 PM - HomePage - INFO: Click on User menu 
+05/29/2023 12:35:16 PM - HomePage - INFO: Click on Logout menu 
+05/29/2023 12:35:23 PM - HomePage - INFO: Getting Driver title
+05/29/2023 12:36:30 PM - TSLoginPage - INFO: Navigating to TS Homepage
+05/29/2023 12:36:30 PM - TSLoginPage - INFO: Page title is-Onboard home | Onboard | Infinite BrassRing Platform
+05/29/2023 12:36:40 PM - NHMyTasksPage - INFO: User now click on task to naviagate  No Form
+05/29/2023 12:37:17 PM - NHMyTasksPage - INFO: User now click on task to naviagate  Direct Credit
+05/29/2023 12:38:16 PM - NHMyTasksPage - INFO: User now click on task to naviagate  Conflict of Interest
+05/29/2023 12:39:28 PM - HomePage - INFO: Click on User menu 
+05/29/2023 12:39:35 PM - HomePage - INFO: Click on Logout menu 
+05/29/2023 12:39:42 PM - HomePage - INFO: Getting Driver title
+05/29/2023 12:40:02 PM - TSLoginPage - INFO: Navigating to TS Homepage
+05/29/2023 12:40:02 PM - TSLoginPage - INFO: Page title is-Onboard home | Onboard Manager | Infinite BrassRing Platform
+05/29/2023 12:40:12 PM - TestStatus - INFO: + User is being navigated to Landing Page
