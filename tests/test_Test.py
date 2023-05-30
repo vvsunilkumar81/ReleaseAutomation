@@ -44,17 +44,17 @@ class TestSmoke():
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
-        lp.logintsonboard(self.appurl, "autMondayMayrelo", "QAtest234#")
+        lp.logintsonboard(self.appurl, "autMondayMayyfxt", "QAtest234#")
         time.sleep(10)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
 
-    def test_DirectCredit(self):
+    def test_CompleteW4Task(self):
         nhtasks = NHMyTasksPage(self.driver)
         ds=DigitalSignature(self.driver)
         ci = ConflictInterestPage(self.driver)
         print(self.driver.title)
-        nhtasks.clickTask("Conflict of Interest")
+        nhtasks.clickTask("Onboarding US W4")
         time.sleep(5)
         print(self.driver.title)
         ci.completeTask("Yes")

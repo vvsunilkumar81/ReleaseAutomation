@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 import utility.custom_logger as cl
 import logging
 import time
@@ -16,15 +17,58 @@ class I9Section1Page(BasePage):
         self.driver = driver
         self.ts = TestStatus(driver)
 
-    gender_select_id="field133"
-    submit_button_css="button[label='Submit']"
-    relocation_date_css=""#field115"
-    dd_task_xpath="//a[contains(text(),'Direct Deposit Form')]"
+    continuebutton = "btncontinue"
+    firstname = "nhfirstname"
+    lastname = "nhlastname"
+    middlename = "nhmiddleinitial"
+    otherlastname="nhotherlastnames"
+    dob="nhdateofbirth"
+    ssnavailable="ssnAvailable"
+    ssn = "nhssn"
+    address = "nhstreetaddr"
+    aptno="nhaptmtno"
+    city = "nhcity"
+    state = "state"
+    teleno="nhtelnumber"
+    zip = "nhzipcode"
+    saveandcontinue="btnsaveandcontinue"
+    citizenship="citizenshipStatus"
+    checkbox="translatorChecked"
+    signanadseal="signandseal"
+    success="btnsuccess"
 
+    def completeI9Section1USCitizen(self, fname,lname,mname,othername,ssn,address,aptno,city,teleno):
+        self.elementClick(self.checkbox,"name")
+        time.sleep(1)
+        self.elementClick(self.continuebutton)
+        time.sleep(1)
+        self.sendKeys(fname,self.firstname)
+        self.sendKeys(lname, self.lastname)
+        self.sendKeys(mname, self.middlename)
+        self.sendKeys(othername, self.otherlastname)
+        self.sendKeys("04/30/1981", self.dob)
+        time.sleep(1)
+        self.elementClick(self.ssnavailable,"name")
+        time.sleep(1)
 
+        self.sendKeys(ssn, self.ssn)
+        self.sendKeys(address, self.address)
+        self.sendKeys(aptno, self.aptno)
+        self.sendKeys(city, self.city)
 
-
-
-
-
+        self.sendKeys(teleno, self.teleno)
+        self.elementClick(self.saveandcontinue)
+        time.sleep(5)
+        self.elementClick(self.continuebutton)
+        time.sleep(1)
+        self.elementClick(self.citizenship,"name")
+        time.sleep(1)
+        self.elementClick(self.saveandcontinue)
+        time.sleep(5)
+        self.elementClick(self.saveandcontinue)
+        time.sleep(5)
+        self.elementClick(self.signanadseal)
+        time.sleep(2)
+        self.elementClick(self.success)
+        time.sleep(5)
 

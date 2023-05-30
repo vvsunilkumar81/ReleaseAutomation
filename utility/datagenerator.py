@@ -20,6 +20,7 @@ import shutil
 from datetime import datetime
 from datetime import datetime as dt, timedelta
 from pytz import timezone
+from faker import Faker
 
 
 class DataGenerator(object):
@@ -30,6 +31,8 @@ class DataGenerator(object):
     currMonth = ind_time.strftime("%B")
     emaildomain = "mailnesia.com"
     currTime = ind_time.strftime("%d%m%Y%H%M%S")
+    Faker.seed(0)
+
 
     def getNhLastName(self):
         return "AutLast" + self.currDay + self.currMonth + self.randomString

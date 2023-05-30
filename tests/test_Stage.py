@@ -10,9 +10,11 @@ from pages.nh.ConflictInterestPage import ConflictInterestPage
 from pages.nh.DigitalSignature import DigitalSignature
 from pages.nh.DirectCreditPage import DirectCreditPage
 from pages.nh.GenericPage import GenericPage
+from pages.nh.I9Section1Page import I9Section1Page
 from pages.nh.NHMyTasksPage import NHMyTasksPage
 from pages.nh.NewHireDashboard import NewHireDashboard
 from pages.nh.NoFormPage import NoFormPage
+from pages.nh.W4Page import W4Page
 from resources import tsconfig as utils
 import configparser
 import time
@@ -45,7 +47,7 @@ class TestSmoke():
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
         lp.logintsonboard(self.appurl, self.hm, "QAtest1@")
-        time.sleep(10)
+        time.sleep(5)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
 
@@ -139,15 +141,41 @@ class TestSmoke():
         time.sleep(5)
         print(self.driver.title)
 
+    def test_CompleteW4Task(self):
+        nhtasks = NHMyTasksPage(self.driver)
+        w4 = W4Page(self.driver)
+        print(self.driver.title)
+        nhtasks.clickTask("Onboarding US W4")
+        time.sleep(5)
+        print(self.driver.title)
+        w4.completeTaskWithClaimExemptFromWithHolding(self.testdata[0], self.testdata[1], "M", "123-12-1200", "test",
+                                                      "testcity", "Maryland", "12345",
+                                                      "Married filing jointly (or Qualifying widow(er))")
+        time.sleep(5)
+        print(self.driver.title)
+
+    def test_CompleteI9Section1Task(self):
+        nhtasks = NHMyTasksPage(self.driver)
+        i9section1 = I9Section1Page(self.driver)
+        print(self.driver.title)
+        nhtasks.clickTask("I-9 Section 1")
+        time.sleep(5)
+        print(self.driver.title)
+        i9section1.completeI9Section1USCitizen(self.testdata[0], self.testdata[1], "M","test", "123-12-1200", "test",
+                                               "123", "12345",
+                                               "123-123-1234")
+        time.sleep(5)
+        print(self.driver.title)
 
     def test_Logout_NH(self):
         home = HomePage(self.driver)
         home.logoutfromts()
         time.sleep(10)
 
-    def test_Relogin_hm(self):
+    def test_Relogin_hmandSearchNewhire(self):
         lp = TSLoginPage(self.driver)
         ts = TestStatus(self.driver)
+        homepage = HomePage(self.driver)
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
@@ -155,3 +183,11 @@ class TestSmoke():
         time.sleep(10)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
+    def test_CompleteSection2(self):
+        ts = TestStatus(self.driver)
+        myTasks = MyTasksPage(self.driver)
+        obStart = OnboardStartPage(self.driver)
+        ts.mark("Pass", "User is navigated to Onboard Task page")
+        myTasks.clickTask("Onboard Start")
+        time.sleep(10)
+        obStart.completeOBStartTask()
