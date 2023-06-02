@@ -4,6 +4,7 @@ from pages.common.HomePage import HomePage
 from pages.common.LoginPage import TSLoginPage
 from pages.hm.AdminPage import AdminPage
 from pages.hm.CreateNewHirePage import CreateNewHirePage
+from pages.hm.I9Section2Page import I9Section2Page
 from pages.hm.MyTasksPage import MyTasksPage
 from pages.hm.OnboardStartPage import OnboardStartPage
 from pages.nh.ConflictInterestPage import ConflictInterestPage
@@ -38,27 +39,26 @@ class TestSmoke():
 
 
     @pytest.mark.nh
-    def test_login_hm(self):
+    def test_Relogin_hmandSearchNewhire(self):
         lp = TSLoginPage(self.driver)
         ts = TestStatus(self.driver)
+        homepage = HomePage(self.driver)
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
-        lp.logintsonboard(self.appurl, "autMondayMayyfxt", "QAtest234#")
-        time.sleep(10)
+        lp.logintsonboard(self.appurl, self.hm, "QAtest1@")
+        time.sleep(5)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
+        homepage.click_newhire("AutLastWednesdayMayertt", "AutFirstWednesdayMayertt")
 
-    def test_CompleteW4Task(self):
-        nhtasks = NHMyTasksPage(self.driver)
-        ds=DigitalSignature(self.driver)
-        ci = ConflictInterestPage(self.driver)
-        print(self.driver.title)
-        nhtasks.clickTask("Onboarding US W4")
+    def test_CompleteSection2(self):
+        ts = TestStatus(self.driver)
+        myTasks = MyTasksPage(self.driver)
+        i9sec2 = I9Section2Page(self.driver)
+        ts.mark("Pass", "User is navigated to Onboard Task page")
+        myTasks.clickTask("I-9 Section 2")
         time.sleep(5)
-        print(self.driver.title)
-        ci.completeTask("Yes")
+        i9sec2.completeI9Section2USCitizen("U.S. Passport","1234567", "01/01/2025", "06/02/2023")
+        myTasks.clickTask("E-Verify")
         time.sleep(5)
-        print(self.driver.title)
-
-

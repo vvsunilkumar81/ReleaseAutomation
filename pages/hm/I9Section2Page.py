@@ -17,45 +17,60 @@ class I9Section2Page(BasePage):
         self.driver = driver
         self.ts = TestStatus(driver)
 
-    continuebutton = "continueBtn"
-    docType = "documentType"
-    docTypeATitle = "docTypeA0Title"
+    continueBtn = "continueBtn"
+    docTypeA = "input[type='radio'][value='A']"
+    docTypeAdropdown = "docTypeA0Title"
     docANum = "docTypeA0DocNum"
     docTypeAExpDate = "docTypeA0DocExpDate"
     empStartdate = "empStartDate"
     saveandContinue = "p2_saveAndContinueBtn"
-    ipEmpRep = "i9EmprRepTitle"
+    i9EmpRep = "i9EmprRepTitle"
     saveandContinue_1 = "s2_saveAndContinueBtn"
     saveandContinue_2 = "p2_saveAndContinueBtn"
     signanadseal = "signandseal"
 
-    def completeI9Section2USCitizen(self, docANum,docExpDate,empStartDate,sec2reptitle):
-        self.elementClick(self.continuebutton)
+    def completeI9Section2USCitizen(self,docAName, docANum,docExpDate,empStartDate):
+        self.elementClick(self.continueBtn)
+        time.sleep(5)
+        self.elementClick(self.docTypeA,"css")
+        time.sleep(3)
+        dropdown = self.driver.find_element(By.ID, self.docTypeAdropdown)
+        dropdown.click()
+        time.sleep(2)
+        Select(dropdown).select_by_visible_text(docAName)
+        time.sleep(2)
+        self.sendKeys(docANum,self.docANum)
+        time.sleep(5)
+        self.elementClick(self.docTypeAExpDate)
         time.sleep(1)
-        self.driver.find_element_by_name("documentType").click()
-        self.driver.find_element_by_id("docTypeA0Title").click()
-        self.driver.find_element_by_id("docTypeA0DocNum").click()
-        self.driver.find_element_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Document Number'])[1]/following::*[name()='svg'][1]").click()
-        self.driver.find_element_by_xpath(
-            "(.//*[normalize-space(text()) and normalize-space(.)='Document Number #1 List A'])[1]/following::*[name()='svg'][1]").click()
-        self.driver.find_element_by_id("docTypeA0DocNum").click()
-        self.driver.find_element_by_id("docTypeA0DocNum").clear()
-        self.driver.find_element_by_id("docTypeA0DocNum").send_keys(docANum)
-        self.driver.find_element_by_css_selector(
-            "button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-edgeEnd.MuiIconButton-sizeMedium.css-slyssw > svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-vubbuv > path").click()
-        self.driver.find_element_by_id("docTypeA0DocExpDate").click()
-        self.driver.find_element_by_id("docTypeA0DocExpDate").click()
-        self.driver.find_element_by_id("docTypeA0DocExpDate").clear()
-        self.driver.find_element_by_id("docTypeA0DocExpDate").send_keys("01/01/2024")
-        self.driver.find_element_by_id("empStartDate").click()
-        self.driver.find_element_by_id("empStartDate").clear()
-        self.driver.find_element_by_id("empStartDate").send_keys("05/06/2023")
-        self.driver.find_element_by_id("p2_saveAndContinueBtn").click()
-        self.driver.find_element_by_id("i9EmprRepTitle").click()
-        self.driver.find_element_by_id("i9EmprRepTitle").clear()
-        self.driver.find_element_by_id("i9EmprRepTitle").send_keys("QA")
-        self.driver.find_element_by_id("s2_saveAndContinueBtn").click()
-        self.driver.find_element_by_id("p2_saveAndContinueBtn").click()
-        self.driver.find_element_by_id("signandseal").click()
-        self.driver.find_element_by_id("p2_saveAndContinueBtn").click()
+        self.sendKeys(docExpDate,self.docTypeAExpDate)
+        time.sleep(2)
+
+        self.elementClick(self.empStartdate)
+        time.sleep(1)
+        self.sendKeys(empStartDate, self.empStartdate)
+        time.sleep(2)
+        self.elementClick(self.saveandContinue)
+        time.sleep(1)
+        self.sendKeys("QA Manager", self.i9EmpRep)
+        time.sleep(1)
+        self.elementClick(self.saveandContinue_1)
+        time.sleep(5)
+        self.elementClick(self.saveandContinue_2)
+        time.sleep(5)
+        self.elementClick(self.signanadseal)
+        time.sleep(5)
+        self.elementClick(self.saveandContinue_2)
+        time.sleep(5)
+
+
+
+
+
+
+
+
+
+
+
+

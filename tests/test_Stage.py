@@ -4,6 +4,7 @@ from pages.common.HomePage import HomePage
 from pages.common.LoginPage import TSLoginPage
 from pages.hm.AdminPage import AdminPage
 from pages.hm.CreateNewHirePage import CreateNewHirePage
+from pages.hm.I9Section2Page import I9Section2Page
 from pages.hm.MyTasksPage import MyTasksPage
 from pages.hm.OnboardStartPage import OnboardStartPage
 from pages.nh.ConflictInterestPage import ConflictInterestPage
@@ -183,11 +184,22 @@ class TestSmoke():
         time.sleep(10)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
+        homepage.click_newhire(self.testdata[1], self.testdata[0])
+
     def test_CompleteSection2(self):
         ts = TestStatus(self.driver)
         myTasks = MyTasksPage(self.driver)
-        obStart = OnboardStartPage(self.driver)
+        i9sec2 = I9Section2Page(self.driver)
         ts.mark("Pass", "User is navigated to Onboard Task page")
-        myTasks.clickTask("Onboard Start")
-        time.sleep(10)
-        obStart.completeOBStartTask()
+        myTasks.clickTask("I-9 Section 2")
+        time.sleep(5)
+        i9sec2.completeI9Section2USCitizen("U.S. Passport", "1234567", "01/01/2025", "06/02/2023")
+        myTasks.clickTask("E-Verify")
+        time.sleep(5)
+
+    def test_Logout_HM(self):
+        home = HomePage(self.driver)
+        home.logoutfromts()
+        time.sleep(5)
+
+

@@ -27,7 +27,7 @@ class MyTasksPage(BasePage):
             self.log.info("task is not found")
 
     def clickTask(self, taskname):
-        self.log.info("User now click Onboard Start link"+taskname)
+        self.log.info("User now click on task"+" "+taskname)
         task_name = self.driver.find_element(By.PARTIAL_LINK_TEXT, taskname)
         task_name.click()
         time.sleep(10)
