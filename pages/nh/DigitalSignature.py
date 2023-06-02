@@ -2,6 +2,9 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.remote.webelement import WebElement
+
 import utility.custom_logger as cl
 import logging
 import time
@@ -18,28 +21,30 @@ class DigitalSignature(BasePage):
         self.ts = TestStatus(driver)
 
     edit_link_xpath="//label[normalize-space()='Edit']/parent::button"
-    canvas_xpath = "//body//div//canvas[1]"
+    canvas = "//div[@id='DrawSignCanvas']/div/div/div/canvas[4]"
     submit_button_xpath = "//div[ @class ='full-width'] // button[1]"
+    drawsignsubmit="DrawSignSubmitButton"
+    saveandcontinue="p2_saveAndContinueBtn"
 
     def drawsignature(self):
 
-        try:
-            self.elementClick(self.edit_link_xpath,locatorType="xpath")
-            actionChains = ActionChains(self.driver)
-            element=self.driver.find_element(By.XPATH,"//button/label")
-            actionChains.move_to_element(element).click().perform()
-            actions = ActionChains(self.driver)
-            maxwidth = int(self.canvas_xpath.attr("width").toInteger())
-            actions.moveToElement(self.canvas_xpath.firstElement(), 100, 40)
-            actions.clickAndHold(self.canvas_xpath.firstElement())
-            actions.moveByOffset(40, -10)
-            actions.moveByOffset(40, 10)
-            actions.moveByOffset(40, -10)
-            actions.moveByOffset(maxwidth - 10, 10)
-            actions.release(on_element=self.canvas_xpath.firstElement())
-            actions.perform()
-            time.sleep(5)
-            self.elementClick(self.submit_button_xpath, locatorType="xpath")
+           actions = ActionChains(self.driver)
+           canvas = self.driver.find_element(By.XPATH, self.canvas)
+           actions.move_to_element(canvas)
+           actions.click_and_hold(canvas)
+           actions.move_by_offset(40,-10)
+           actions.move_by_offset(40,10)
+           actions.move_by_offset(40,-10)
+           actions.move_by_offset(245,10)
+           actions.release().perform()
+           time.sleep(5)
+           self.elementClick(self.drawsignsubmit)
+           time.sleep(5)
+           self.elementClick(self.saveandcontinue)
 
-        except:
-            self.log.info("Not logout")
+           time.sleep(5)
+
+
+
+5
+

@@ -4,14 +4,18 @@ from pages.common.HomePage import HomePage
 from pages.common.LoginPage import TSLoginPage
 from pages.hm.AdminPage import AdminPage
 from pages.hm.CreateNewHirePage import CreateNewHirePage
+from pages.hm.I9Section2Page import I9Section2Page
 from pages.hm.MyTasksPage import MyTasksPage
 from pages.hm.OnboardStartPage import OnboardStartPage
+from pages.nh.ConflictInterestPage import ConflictInterestPage
 from pages.nh.DigitalSignature import DigitalSignature
 from pages.nh.DirectCreditPage import DirectCreditPage
 from pages.nh.GenericPage import GenericPage
+from pages.nh.I9Section1Page import I9Section1Page
 from pages.nh.NHMyTasksPage import NHMyTasksPage
 from pages.nh.NewHireDashboard import NewHireDashboard
 from pages.nh.NoFormPage import NoFormPage
+from pages.nh.W4Page import W4Page
 from resources import tsconfig as utils
 import configparser
 import time
@@ -34,7 +38,7 @@ class TestSmoke():
     appurl = config.get('stage', 'client_URL')
     test = DataGenerator()
     testName = utils.whoami() + test.getCurrTime()
-    testdata_job = test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
+    testdata = test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
 
     @pytest.mark.nh
     def test_login_hm(self):
@@ -44,7 +48,7 @@ class TestSmoke():
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
         lp.logintsonboard(self.appurl, self.hm, "QAtest1@")
-        time.sleep(10)
+        time.sleep(5)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
 
@@ -57,13 +61,13 @@ class TestSmoke():
         print("title of Create Newhire" + self.driver.title)
         assert "HM Create NewHire | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         time.sleep(10)
-        createnhpage.completecreatenewhire(self.testdata_job[2], "English(US)", self.testdata_job[0],
-                                           self.testdata_job[1], self.testdata_job[3], "8648378",
+        createnhpage.completecreatenewhire(self.testdata[2], "English(US)", self.testdata[0],
+                                           self.testdata[1], self.testdata[3], "8648378",
                                            "12345", "United States", "Maryland")
 
         assert homepage.isElementPresent(homepage.mytasks, "css") == True
         ts.mark("Pass", "User is being navigated to Home Page")
-        homepage.click_newhire(self.testdata_job[1], self.testdata_job[0])
+        homepage.click_newhire(self.testdata[1], self.testdata[0])
         ts.mark("Pass", "User is navigated to Onboard Tasks")
 
     def test_CompleteObStartTask(self):
@@ -87,7 +91,7 @@ class TestSmoke():
     def test_resetPassword(self):
         admin = AdminPage(self.driver)
         home = HomePage(self.driver)
-        reseturl = admin.searchUser(self.testdata_job[2])
+        reseturl = admin.searchUser(self.testdata[2])
         time.sleep(10)
         home.logoutfromts()
         time.sleep(10)
@@ -102,7 +106,7 @@ class TestSmoke():
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
-        lp.logintsonboard(self.appurl, self.testdata_job[2], "QAtest234#")
+        lp.logintsonboard(self.appurl, self.testdata[2], "QAtest234#")
         time.sleep(10)
         print(self.driver.title)
 
@@ -116,7 +120,7 @@ class TestSmoke():
         noform.completeTask("Yes", "Male", "test")
         time.sleep(5)
 
-    def test_DirectCredit(self):
+    def test_CompleteDirectCredit(self):
         nhtasks = NHMyTasksPage(self.driver)
         dc = DirectCreditPage(self.driver)
         print(self.driver.title)
@@ -126,14 +130,53 @@ class TestSmoke():
         dc.completeTask("ICICI", "1234567", "yes", "yes")
         time.sleep(5)
 
+    def test_CompleteConflictInterest(self):
+        nhtasks = NHMyTasksPage(self.driver)
+        ds = DigitalSignature(self.driver)
+        ci = ConflictInterestPage(self.driver)
+        print(self.driver.title)
+        nhtasks.clickTask("Conflict of Interest")
+        time.sleep(5)
+        print(self.driver.title)
+        ci.completeTask("Yes")
+        time.sleep(5)
+        print(self.driver.title)
+
+    def test_CompleteW4Task(self):
+        nhtasks = NHMyTasksPage(self.driver)
+        w4 = W4Page(self.driver)
+        print(self.driver.title)
+        nhtasks.clickTask("Onboarding US W4")
+        time.sleep(5)
+        print(self.driver.title)
+        w4.completeTaskWithClaimExemptFromWithHolding(self.testdata[0], self.testdata[1], "M", "123-12-1200", "test",
+                                                      "testcity", "Maryland", "12345",
+                                                      "Married filing jointly (or Qualifying widow(er))")
+        time.sleep(5)
+        print(self.driver.title)
+
+    def test_CompleteI9Section1Task(self):
+        nhtasks = NHMyTasksPage(self.driver)
+        i9section1 = I9Section1Page(self.driver)
+        print(self.driver.title)
+        nhtasks.clickTask("I-9 Section 1")
+        time.sleep(5)
+        print(self.driver.title)
+        i9section1.completeI9Section1USCitizen(self.testdata[0], self.testdata[1], "M","test", "123-12-1200", "test",
+                                               "123", "12345",
+                                               "123-123-1234")
+        time.sleep(5)
+        print(self.driver.title)
+
     def test_Logout_NH(self):
         home = HomePage(self.driver)
         home.logoutfromts()
         time.sleep(10)
 
-    def test_Relogin_hm(self):
+    def test_Relogin_hmandSearchNewhire(self):
         lp = TSLoginPage(self.driver)
         ts = TestStatus(self.driver)
+        homepage = HomePage(self.driver)
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
@@ -141,3 +184,22 @@ class TestSmoke():
         time.sleep(10)
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
+        homepage.click_newhire(self.testdata[1], self.testdata[0])
+
+    def test_CompleteSection2(self):
+        ts = TestStatus(self.driver)
+        myTasks = MyTasksPage(self.driver)
+        i9sec2 = I9Section2Page(self.driver)
+        ts.mark("Pass", "User is navigated to Onboard Task page")
+        myTasks.clickTask("I-9 Section 2")
+        time.sleep(5)
+        i9sec2.completeI9Section2USCitizen("U.S. Passport", "1234567", "01/01/2025", "06/02/2023")
+        myTasks.clickTask("E-Verify")
+        time.sleep(5)
+
+    def test_Logout_HM(self):
+        home = HomePage(self.driver)
+        home.logoutfromts()
+        time.sleep(5)
+
+

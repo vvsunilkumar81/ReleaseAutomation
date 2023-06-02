@@ -1,10 +1,10 @@
 import pytest
-from selenium.webdriver import ActionChains
 
 from pages.common.HomePage import HomePage
 from pages.common.LoginPage import TSLoginPage
 from pages.hm.AdminPage import AdminPage
 from pages.hm.CreateNewHirePage import CreateNewHirePage
+from pages.hm.I9Section2Page import I9Section2Page
 from pages.hm.MyTasksPage import MyTasksPage
 from pages.hm.OnboardStartPage import OnboardStartPage
 from pages.nh.ConflictInterestPage import ConflictInterestPage
@@ -23,7 +23,7 @@ from utility.teststatus import TestStatus
 
 
 @pytest.mark.usefixtures("test_setup")
-class TestNH():
+class TestSmoke():
     # Static  properties
     config = configparser.ConfigParser()
     config.read(utils.configfilepath)
@@ -34,36 +34,31 @@ class TestNH():
     clientname = config.get('stage', 'client_name')
     nhpassword = config.get('stage', 'nh_password')
     appurl = config.get('stage', 'client_URL')
+    test = DataGenerator()
+    testName = utils.whoami() + test.getCurrTime()
+
 
     @pytest.mark.nh
-    def test_login_nh(self):
+    def test_Relogin_hmandSearchNewhire(self):
         lp = TSLoginPage(self.driver)
         ts = TestStatus(self.driver)
+        homepage = HomePage(self.driver)
         self.driver.get(self.appurl)
         time.sleep(5)
         print("title of Login Page" + self.driver.title)
-        lp.logintsonboard(self.appurl, "autTuesdayMaygpmu", "QAtest234#")
-        time.sleep(10)
-        print(self.driver.title)
-        nhtasks = NHMyTasksPage(self.driver)
-        CITask = ConflictInterestPage(self.driver)
-        print(self.driver.title)
-        nhtasks.clickTask("Conflict of Interest")
+        lp.logintsonboard(self.appurl, self.hm, "QAtest1@")
         time.sleep(5)
-        print(self.driver.title)
-        CITask.completeTask("No")
-        action = ActionChains(self.driver)
-        element = self.driver.find_element_by_xpath("//[@id='DrawSignCanvas']/div[1]/div/div/canvas[4]")
+        assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
+        ts.mark("Pass", "User is being navigated to Landing Page")
+        homepage.click_newhire("AutLastWednesdayMayertt", "AutFirstWednesdayMayertt")
 
-        # click the item
-        action.move_to_element(element)
-        action.clickAndHold()
-        action.moveByOffset(40, -10)
-        action.moveByOffset(40, 10)
-        action.moveByOffset(40, -10)
-        action.moveByOffset(100, - 10, 10)
-        action.release()
-        action.build()
-        action.perform()
-
-
+    def test_CompleteSection2(self):
+        ts = TestStatus(self.driver)
+        myTasks = MyTasksPage(self.driver)
+        i9sec2 = I9Section2Page(self.driver)
+        ts.mark("Pass", "User is navigated to Onboard Task page")
+        myTasks.clickTask("I-9 Section 2")
+        time.sleep(5)
+        i9sec2.completeI9Section2USCitizen("U.S. Passport","1234567", "01/01/2025", "06/02/2023")
+        myTasks.clickTask("E-Verify")
+        time.sleep(5)
