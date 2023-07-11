@@ -61,7 +61,7 @@ class TestSmoke():
         homepage.clickCreateNewhire()
         print("title of Create Newhire" + self.driver.title)
         assert "HM Create NewHire | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
-        time.sleep(10)
+        time.sleep(20)
         createnhpage.completecreatenewhire(self.testdata[2], "English(US)", self.testdata[0],
                                            self.testdata[1], self.testdata[3], "8648378",
                                            "12345", "United States", "Maryland")
