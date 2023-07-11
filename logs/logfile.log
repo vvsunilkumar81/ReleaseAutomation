@@ -98,3 +98,64 @@ User Name autTuesdayJulydbmv'
 07/11/2023 02:32:34 AM - HomePage - INFO: Click on User menu 
 07/11/2023 02:32:41 AM - HomePage - INFO: Click on Logout menu 
 07/11/2023 02:32:49 AM - HomePage - INFO: Getting Driver title
+07/11/2023 04:44:41 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 04:44:41 AM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+07/11/2023 04:44:46 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 04:45:02 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 04:45:02 AM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+07/11/2023 04:45:07 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 04:45:07 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 04:45:14 AM - HomePage - INFO: Enter Newhire nameAutLastWednesdayMayertt, AutFirstWednesdayMayertt
+07/11/2023 04:45:35 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 04:45:35 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 04:47:36 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 04:47:36 AM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+07/11/2023 04:47:42 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 04:48:58 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 04:48:58 AM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+07/11/2023 04:49:03 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 04:49:03 AM - HomePage - INFO: Click on createnewhire button to navigate to Create Newhire page 
+07/11/2023 04:49:59 AM - TestStatus - INFO: + User is being navigated to Home Page
+07/11/2023 04:49:59 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 04:50:06 AM - HomePage - INFO: Enter Newhire nameAutLastTuesdayJulykrda, AutFirstTuesdayJulykrda
+07/11/2023 04:50:26 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 04:50:26 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 04:50:26 AM - TestStatus - INFO: + User is navigated to Onboard Tasks
+07/11/2023 04:50:26 AM - TestStatus - INFO: + User is navigated to Onboard Task page
+07/11/2023 04:50:26 AM - MyTasksPage - INFO: User now click on task Onboard Start
+07/11/2023 04:50:54 AM - MyTasksPage - INFO: click app launcher
+07/11/2023 04:51:09 AM - TestStatus - INFO: + User is navigated to Admin App
+07/11/2023 04:51:09 AM - AdminPage - INFO: click side naviation bar
+07/11/2023 04:51:34 AM - AdminPage - INFO: click on Filter
+07/11/2023 04:52:01 AM - AdminPage - INFO: Getting text on element :: 
+07/11/2023 04:52:01 AM - AdminPage - INFO: The text is :: 'Your profile on the stgTestclient website has been successfully created.
+To begin, click on the link below. You will be prompted to create a password during the login process.
+https://stagingts.brassring.com/ibp/core/app/auth/stgTestclient/?uri=kx%3alogin%253aautTuesdayJulykrda%253arst%253ad2d22b29-e0a7-43f5-9fb1-184b0f19bd81
+After creating your password, you will be able to access your application with the below username:
+User Name autTuesdayJulykrda'
+07/11/2023 04:52:18 AM - HomePage - INFO: Click on User menu 
+07/11/2023 04:52:25 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 04:52:33 AM - HomePage - INFO: Getting Driver title
+07/11/2023 04:53:39 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 04:53:39 AM - TSLoginPage - INFO: Page title is-Onboard home | Onboard | Infinite BrassRing Platform
+07/11/2023 04:53:49 AM - NHMyTasksPage - INFO: User now click on task to naviagate  No Form
+07/11/2023 04:54:24 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Direct Credit
+07/11/2023 04:55:24 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Conflict of Interest
+07/11/2023 04:56:35 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Onboarding US W4
+07/11/2023 04:57:50 AM - NHMyTasksPage - INFO: User now click on task to naviagate  I-9 Section 1
+07/11/2023 04:59:03 AM - HomePage - INFO: Click on User menu 
+07/11/2023 04:59:10 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 04:59:18 AM - HomePage - INFO: Getting Driver title
+07/11/2023 04:59:37 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 04:59:37 AM - TSLoginPage - INFO: Page title is-Home
+07/11/2023 04:59:48 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 04:59:48 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 04:59:55 AM - HomePage - INFO: Enter Newhire nameAutLastTuesdayJulykrda, AutFirstTuesdayJulykrda
+07/11/2023 05:00:15 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 05:00:15 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 05:00:15 AM - TestStatus - INFO: + User is navigated to Onboard Task page
+07/11/2023 05:00:15 AM - MyTasksPage - INFO: User now click on task I-9 Section 2
+07/11/2023 05:01:37 AM - MyTasksPage - INFO: User now click on task E-Verify
+07/11/2023 05:01:52 AM - HomePage - INFO: Click on User menu 
+07/11/2023 05:01:59 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 05:02:07 AM - HomePage - INFO: Getting Driver title
