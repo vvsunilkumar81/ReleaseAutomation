@@ -186,7 +186,7 @@ class TestSmoke():
         ts.mark("Pass", "User is being navigated to Landing Page")
         homepage.click_newhire(self.testdata[1], self.testdata[0])
 
-    def test_CompleteSection2(self):
+    def test_CompleteSection2pip(self):
         ts = TestStatus(self.driver)
         myTasks = MyTasksPage(self.driver)
         i9sec2 = I9Section2Page(self.driver)

@@ -54,27 +54,32 @@ def test_setup(request):
     print("Test completed")
 
 
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    pytest_html = item.config.pluginmanager.getplugin("html")
+
+@pytest.mark.hookwrapper
+def pytest_runtest_makereport(item):
+    """
+    Extends the PyTest Plugin to take and embed screenshot in html report, whenever test fails.
+    :param item:
+    """
+    pytest_html = item.config.pluginmanager.getplugin('html')
     outcome = yield
     report = outcome.get_result()
-    extra = getattr(report, "extra", [])
+    extra = getattr(report, 'extra', [])
 
-    if report.when == "call":
-        extra.append(pytest_html.extras.url("http://9.37.195.82:9080/onboardui/bws_smoke3/login/user"))
-        xfail = hasattr(report, "wasxfail")
+    if report.when == 'call' or report.when == "setup":
+        xfail = hasattr(report, 'wasxfail')
         if (report.skipped and xfail) or (report.failed and not xfail):
-            project_root = os.path.dirname(os.path.dirname(__file__))
-            report_directory = os.path.join(project_root, 'reports\\')
-            currentTime = DataGenerator.currTime
-            file_name = report.nodeid.replace("::", "-") + currentTime + ".png"
-            destinationFile = os.path.join(report_directory, file_name)
-            driver.save_screenshot(destinationFile)
+            file_name = report.nodeid.replace("::", "_") + ".png"
+            _capture_screenshot(file_name)
             if file_name:
-             html = '<div><img src="%s" alt="screenshot" style="width:300px;height=200px"onclick="window.open(this.src)" align="right"/></div>' % file_name
-            extra.append(pytest_html.extras.html(html))
-            report.extra = extra
+                html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
+                       'onclick="window.open(this.src)" align="right"/></div>' % file_name
+                extra.append(pytest_html.extras.html(html))
+        report.extra = extra
+
+
+def _capture_screenshot(name):
+    driver.get_screenshot_as_file(name)
 
 
 def pytest_html_report_title(report):

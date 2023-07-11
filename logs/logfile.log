@@ -46,3 +46,55 @@ User Name autFridayJunedffw'
 06/02/2023 03:05:42 AM - HomePage - INFO: Click on User menu 
 06/02/2023 03:05:49 AM - HomePage - INFO: Click on Logout menu 
 06/02/2023 03:05:56 AM - HomePage - INFO: Getting Driver title
+07/11/2023 02:19:42 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 02:19:42 AM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+07/11/2023 02:19:47 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 02:19:47 AM - HomePage - INFO: Click on createnewhire button to navigate to Create Newhire page 
+07/11/2023 02:20:43 AM - TestStatus - INFO: + User is being navigated to Home Page
+07/11/2023 02:20:43 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 02:20:50 AM - HomePage - INFO: Enter Newhire nameAutLastTuesdayJulydbmv, AutFirstTuesdayJulydbmv
+07/11/2023 02:21:10 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 02:21:10 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 02:21:10 AM - TestStatus - INFO: + User is navigated to Onboard Tasks
+07/11/2023 02:21:10 AM - TestStatus - INFO: + User is navigated to Onboard Task page
+07/11/2023 02:21:10 AM - MyTasksPage - INFO: User now click on task Onboard Start
+07/11/2023 02:21:38 AM - MyTasksPage - INFO: click app launcher
+07/11/2023 02:21:53 AM - TestStatus - INFO: + User is navigated to Admin App
+07/11/2023 02:21:53 AM - AdminPage - INFO: click side naviation bar
+07/11/2023 02:22:17 AM - AdminPage - INFO: click on Filter
+07/11/2023 02:22:44 AM - AdminPage - INFO: Getting text on element :: 
+07/11/2023 02:22:44 AM - AdminPage - INFO: The text is :: 'Your profile on the stgTestclient website has been successfully created.
+To begin, click on the link below. You will be prompted to create a password during the login process.
+https://stagingts.brassring.com/ibp/core/app/auth/stgTestclient/?uri=kx%3alogin%253aautTuesdayJulydbmv%253arst%253a142a3795-8d53-4f92-87f5-48c2f8de1708
+After creating your password, you will be able to access your application with the below username:
+User Name autTuesdayJulydbmv'
+07/11/2023 02:23:02 AM - HomePage - INFO: Click on User menu 
+07/11/2023 02:23:09 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 02:23:16 AM - HomePage - INFO: Getting Driver title
+07/11/2023 02:24:23 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 02:24:23 AM - TSLoginPage - INFO: Page title is-Onboard home | Onboard | Infinite BrassRing Platform
+07/11/2023 02:24:33 AM - NHMyTasksPage - INFO: User now click on task to naviagate  No Form
+07/11/2023 02:25:08 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Direct Credit
+07/11/2023 02:26:07 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Conflict of Interest
+07/11/2023 02:27:19 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Onboarding US W4
+07/11/2023 02:28:33 AM - NHMyTasksPage - INFO: User now click on task to naviagate  I-9 Section 1
+07/11/2023 02:29:46 AM - HomePage - INFO: Click on User menu 
+07/11/2023 02:29:53 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 02:30:01 AM - HomePage - INFO: Getting Driver title
+07/11/2023 02:30:20 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 02:30:20 AM - TSLoginPage - INFO: Page title is-Onboard home | Onboard Manager | Infinite BrassRing Platform
+07/11/2023 02:30:30 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 02:30:30 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 02:30:37 AM - HomePage - INFO: Enter Newhire nameAutLastTuesdayJulydbmv, AutFirstTuesdayJulydbmv
+07/11/2023 02:30:57 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 02:30:57 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 02:30:57 AM - TestStatus - INFO: + User is navigated to Onboard Task page
+07/11/2023 02:30:57 AM - MyTasksPage - INFO: User now click on task I-9 Section 2
+07/11/2023 02:32:03 AM - I9Section2Page - INFO: Element not found with locator: p2_saveAndContinueBtn and  locatorType: id
+07/11/2023 02:32:05 AM - I9Section2Page - INFO: Cannot click on the element with locator: p2_saveAndContinueBtn locatorType: id
+07/11/2023 02:32:15 AM - I9Section2Page - INFO: Element not found with locator: signandseal and  locatorType: id
+07/11/2023 02:32:17 AM - I9Section2Page - INFO: Cannot click on the element with locator: signandseal locatorType: id
+07/11/2023 02:32:29 AM - MyTasksPage - INFO: User now click on task E-Verify
+07/11/2023 02:32:34 AM - HomePage - INFO: Click on User menu 
+07/11/2023 02:32:41 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 02:32:49 AM - HomePage - INFO: Getting Driver title
