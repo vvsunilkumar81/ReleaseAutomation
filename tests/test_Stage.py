@@ -25,6 +25,7 @@ from utility.teststatus import TestStatus
 
 
 @pytest.mark.usefixtures("test_setup")
+@pytest.mark.stage
 class TestSmoke():
     # Static  properties
     config = configparser.ConfigParser()
@@ -40,7 +41,7 @@ class TestSmoke():
     testName = utils.whoami() + test.getCurrTime()
     testdata = test.getdata(utils.testdata_filepath, testName, "Automation_All_Tasks")
 
-    @pytest.mark.nh
+
     def test_login_hm(self):
         lp = TSLoginPage(self.driver)
         ts = TestStatus(self.driver)
@@ -186,7 +187,7 @@ class TestSmoke():
         ts.mark("Pass", "User is being navigated to Landing Page")
         homepage.click_newhire(self.testdata[1], self.testdata[0])
 
-    def test_CompleteSection2pip(self):
+    def test_CompleteSection2(self):
         ts = TestStatus(self.driver)
         myTasks = MyTasksPage(self.driver)
         i9sec2 = I9Section2Page(self.driver)
