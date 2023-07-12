@@ -207,3 +207,50 @@ User Name autTuesdayJulymrix'
 07/11/2023 06:46:37 AM - HomePage - INFO: Click on User menu 
 07/11/2023 06:46:44 AM - HomePage - INFO: Click on Logout menu 
 07/11/2023 06:46:51 AM - HomePage - INFO: Getting Driver title
+07/11/2023 11:20:12 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 11:20:12 AM - TSLoginPage - INFO: Page title is-Login | Infinite Brassring Platform
+07/11/2023 11:20:17 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 11:20:17 AM - HomePage - INFO: Click on createnewhire button to navigate to Create Newhire page 
+07/11/2023 11:21:23 AM - TestStatus - INFO: + User is being navigated to Home Page
+07/11/2023 11:21:23 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 11:21:30 AM - HomePage - INFO: Enter Newhire nameAutLastTuesdayJulybeol, AutFirstTuesdayJulybeol
+07/11/2023 11:21:50 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 11:21:50 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 11:21:50 AM - TestStatus - INFO: + User is navigated to Onboard Tasks
+07/11/2023 11:21:50 AM - TestStatus - INFO: + User is navigated to Onboard Task page
+07/11/2023 11:21:50 AM - MyTasksPage - INFO: User now click on task Onboard Start
+07/11/2023 11:22:17 AM - MyTasksPage - INFO: click app launcher
+07/11/2023 11:22:32 AM - TestStatus - INFO: + User is navigated to Admin App
+07/11/2023 11:22:32 AM - AdminPage - INFO: click side naviation bar
+07/11/2023 11:22:57 AM - AdminPage - INFO: click on Filter
+07/11/2023 11:23:24 AM - AdminPage - INFO: Getting text on element :: 
+07/11/2023 11:23:24 AM - AdminPage - INFO: The text is :: 'Your profile on the stgTestclient website has been successfully created.
+To begin, click on the link below. You will be prompted to create a password during the login process.
+https://stagingts.brassring.com/ibp/core/app/auth/stgTestclient/?uri=kx%3alogin%253aautTuesdayJulybeol%253arst%253aaf55b5cc-9f29-4e23-943b-de3b91cd6357
+After creating your password, you will be able to access your application with the below username:
+User Name autTuesdayJulybeol'
+07/11/2023 11:23:41 AM - HomePage - INFO: Click on User menu 
+07/11/2023 11:23:49 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 11:23:56 AM - HomePage - INFO: Getting Driver title
+07/11/2023 11:25:03 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 11:25:03 AM - TSLoginPage - INFO: Page title is-Onboard home | Onboard | Infinite BrassRing Platform
+07/11/2023 11:25:13 AM - NHMyTasksPage - INFO: User now click on task to naviagate  No Form
+07/11/2023 11:25:49 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Direct Credit
+07/11/2023 11:26:52 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Conflict of Interest
+07/11/2023 11:28:07 AM - NHMyTasksPage - INFO: User now click on task to naviagate  Onboarding US W4
+07/11/2023 11:29:27 AM - NHMyTasksPage - INFO: User now click on task to naviagate  I-9 Section 1
+07/11/2023 11:30:45 AM - HomePage - INFO: Click on User menu 
+07/11/2023 11:30:53 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 11:31:00 AM - HomePage - INFO: Getting Driver title
+07/11/2023 11:31:20 AM - TSLoginPage - INFO: Navigating to TS Homepage
+07/11/2023 11:31:20 AM - TSLoginPage - INFO: Page title is-Onboard home | Onboard Manager | Infinite BrassRing Platform
+07/11/2023 11:31:30 AM - TestStatus - INFO: + User is being navigated to Landing Page
+07/11/2023 11:31:30 AM - HomePage - INFO: Click on Newhire filter 
+07/11/2023 11:31:37 AM - HomePage - INFO: Enter Newhire nameAutLastTuesdayJulybeol, AutFirstTuesdayJulybeol
+07/11/2023 11:31:59 AM - TestStatus - INFO: + Fetched the required newhire
+07/11/2023 11:31:59 AM - TestStatus - INFO: Verification of Newhire name ### TEST SUCCESSFUL
+07/11/2023 11:31:59 AM - TestStatus - INFO: + User is navigated to Onboard Task page
+07/11/2023 11:31:59 AM - MyTasksPage - INFO: User now click on task I-9 Section 2
+07/11/2023 11:31:59 AM - HomePage - INFO: Click on User menu 
+07/11/2023 11:32:07 AM - HomePage - INFO: Click on Logout menu 
+07/11/2023 11:32:14 AM - HomePage - INFO: Getting Driver title
