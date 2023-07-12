@@ -186,6 +186,7 @@ class TestSmoke():
         assert "Onboard home | Onboard Manager | Infinite BrassRing Platform", "Home page displayed" in self.driver.title
         ts.mark("Pass", "User is being navigated to Landing Page")
         homepage.click_newhire(self.testdata[1], self.testdata[0])
+        time.sleep(10)
 
     def test_CompleteSection2(self):
         ts = TestStatus(self.driver)
